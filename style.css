@@ -1268,13 +1268,11 @@ h2 {
     .section4 .info ul li {
         width: 33.33%;
       }
-    .footer .cont {
+      .footer .cont {
         font-size: 30px;
         width: 50px;
-        height: 50px;
-        right: 20px;
-        bottom: 20px;
-      }
+        height: 50px; 
+    }
     }
     
     /* For medium screens (laptops) */
@@ -1285,13 +1283,11 @@ h2 {
     .section4 .info ul li {
         width: 50%;
       }
-    .footer .cont {
-        font-size: 25px;
-        width: 40px;
-        height: 40px;
-        right: 15px;
-        bottom: 15px;
-      }
+      .footer .cont {
+        font-size: 30px;
+        width: 50px;
+        height: 50px; 
+    }
     }
     
     /* For small screens (tablets) */
@@ -1302,13 +1298,11 @@ h2 {
     .section4 .info ul li {
         width: 100%;
       }
-    .footer .cont {
-        font-size: 20px;
-        width: 30px;
-        height: 30px;
-        right: 10px;
-        bottom: 10px;
-      }
+      .footer .cont {
+        font-size: 30px;
+        width: 50px;
+        height: 50px; 
+    }
     }
     
     /* For extra small screens (mobiles) */
@@ -1319,11 +1313,9 @@ h2 {
     .section4 .info ul li {
         width: 100%;
       }
-    .footer .cont {
-        font-size: 15px;
-        width: 20px;
-        height: 20px;
-        right: 5px;
-        bottom: 5px;
-      }
+      .footer .cont {
+        font-size: 30px;
+        width: 50px;
+        height: 50px; 
+    }
     }
