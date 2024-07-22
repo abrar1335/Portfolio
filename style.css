@@ -8,7 +8,10 @@
 body {
     background-color: #0c1022;
     color: #fff;
+    /* width: 100%;
+    height: 100%; */
 }
+
 
 .header {
     position: fixed;
@@ -706,7 +709,14 @@ h2 {
     -webkit-background-clip: text;
 }
 
-.footer .cont {
+.footer{
+    width:auto;
+    height: auto;
+    background: #333;
+}
+.footer .cont a {
+    color: #fff;
+    text-decoration: none;
     font-size: 30px;
     background: linear-gradient(45deg, #f06, #3cf, #f06);
     width: 50px;
@@ -721,6 +731,133 @@ h2 {
     opacity: 0;
     animation: zoomIn 1s ease forwards, circleRotate 5s linear 3;
     animation-delay: 2.1s, 3.1s;
+}
+
+.footer .container {
+    margin-top: 30px;
+    width: 100%;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    /* justify-content: space-between; */
+    word-break: break-all;
+}
+.footer .container .footer_form {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: flex-start; */
+}
+.footer .container .footer_form .frist .about {
+    display: flex;
+    justify-content:space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.footer .container .footer_form .frist .about h1 {
+    font-size: 22px;
+    color: #3cf;
+    font-weight: 500;
+}
+.footer .container .footer_form .frist .about h6 {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 400;
+}
+
+.footer .container .footer_form .frist .about p {
+    color: rgb(152, 152, 152);
+    font-size: 14px;
+    font-weight: 300; 
+}
+
+.footer .container .footer_form .frist .social_link{
+    margin-top: 10px;
+}
+.footer .container .footer_form .frist .social_link  a {
+    text-decoration: none;
+    color: #fff;
+    transition: .3s linear;
+}
+.footer .container .footer_form .frist .social_link  a:hover {
+    color: #3cd;
+}
+
+.footer .container .footer_form .second .contact {
+    display: flex;
+    flex-direction: column;
+}
+.footer .container .footer_form .second .contact h1 {
+    font-size: 22px;
+    color: #3cf;
+    font-weight: 500;
+}
+.footer .container .footer_form .second .contact h1 {
+    font-size: 22px;
+    color: #3cf;
+    font-weight: 500;
+}
+
+.footer .container .footer_form .second .contact h6 {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 400;
+}
+.footer .container .footer_form .second .contact p {
+    color: rgb(152, 152, 152);
+    font-size: 14px;
+    font-weight: 300;   
+}
+
+.footer .container .footer_form .second .btn  {
+    margin-top:10px;
+    border:none;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: #3cd;
+    transition: .3s linear;
+}
+
+.footer .container .footer_form .second .btn a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+}
+.footer .container .footer_form .second .btn:hover  {
+    background:#00758f;
+}
+
+.footer .container .footer_form .third   {
+    display: flex;   
+}
+.footer .container .footer_form .third .link   {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer .container .footer_form .third .link  h1 {
+    font-size: 22px;
+    color: #3cf;
+    font-weight: 500;
+}
+.footer .container .footer_form .third .link  a {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.footer .copy_right {
+    margin-top: 30px;
+    display: flex;
+    justify-content:center;
+}
+.footer .copy_right p {
+    font-size: 18px;
 }
 
 @keyframes slideTop {
@@ -981,6 +1118,7 @@ h2 {
         align-items: center;
     }
     .section1 .home .home-content {
+        margin-top: 20px;
         margin: 0;
         text-align: center;
     }
@@ -1031,6 +1169,7 @@ h2 {
         width: 100%;
         height: auto;
         overflow: hidden;
+        margin-top: 40px;/*for footer */
     }
     .section1 .home .home-content .btn {
         width: 120px;
@@ -1067,6 +1206,9 @@ h2 {
 
 /* Media Queries */
 @media (max-width: 1200px) {
+    .section2 .about {
+        margin-top: 30px;/*for footer */
+    }
     .section2 .about .about-text h2 {
         font-size: 50px;
     }
@@ -1081,7 +1223,24 @@ h2 {
         height: 350px;
     }
 }
-
+@media (min-width: 1201px) {
+    .section2 .about {
+        margin-top: 60px;/*for footer */
+    }
+    .section2 .about .about-text h2 {
+        font-size: 50px;
+    }
+    .section2 .about .about-text h4 {
+        font-size: 25px;
+    }
+    .section2 .about .about-text p {
+        font-size: 18px;
+    }
+    .section2 .about .about-img img {
+        width: 350px;
+        height: 350px;
+    }
+}
 @media (max-width: 992px) {
     .section2 .about {
         grid-template-columns: 1fr;
@@ -1105,6 +1264,7 @@ h2 {
         width: 300px;
         height: 300px;
         margin: 0 auto;
+        margin-top: 270px;/*for footer */
     }
 }
 
@@ -1135,6 +1295,7 @@ h2 {
         font-size: 12px;
     }
     .section2 .about .about-img img {
+         margin-top: 120px; /*for footer */
         width: 200px;
         height: 200px;
     }
@@ -1319,3 +1480,114 @@ h2 {
         height: 50px; 
     }
     }
+
+/* mobile */
+@media screen and (max-width:576px) {
+    footer{
+        width: 100%;
+    }
+    footer .container {
+        width: 100%;
+    }
+    
+    .footer .container .footer_form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        word-break:break-all;
+    }
+    .footer .container .footer_form .frist ,.second , .third {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        word-break:break-all;
+        margin-top: 30px;
+    }
+    .footer .container .footer_form .frist .about{
+        width: 90%;
+        display:flex;
+    }
+    .footer .container .footer_form .frist .social_link{
+        margin-top:30px ;
+        display:flex;
+        justify-content: center;
+    }
+    .footer .container .footer_form .frist .social_link a {
+        width: 50px;
+        font-size: 24px;
+    }
+    .footer .container .footer_form .second .btn {
+        width: 50%;
+    }
+    .footer .copy_right {
+        display: flex;
+        justify-content:center;
+    }
+    .footer .copy_right p {
+        font-size: 18px;
+    }
+
+}
+
+
+@media screen and (max-width:820px){
+    footer{
+        width: 100%;
+        overflow: hidden;
+    }
+    footer .container {
+        width: 100%;
+    }
+    
+    .footer .container .footer_form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        word-break:break-all;
+    }
+    .footer .container .footer_form .frist ,.second , .third {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        word-break:break-all;
+        margin-top: 30px;
+    }
+    .footer .container .footer_form .frist .about{
+        width: 90%;
+        display:flex;
+        align-items: center;
+    }
+    
+    .footer .container .footer_form .second .btn {
+        width: 50%;
+    }
+    .footer .container .footer_form .frist .social_link{
+        margin-top:30px ;
+        display:flex;
+        justify-content: center;
+    }
+    .footer .container .footer_form .frist .social_link a {
+        width: 50px;
+        font-size: 24px;
+    }
+    .footer .container .footer_form .second .contact {
+        align-items: center;
+
+    }
+    
+    .footer .copy_right {
+        display: flex;
+        justify-content:center;
+    }
+
+}
