@@ -693,7 +693,7 @@ h2 {
 
                                                    /* section4 */
 
-.section4 .info ul {
+/* .section4 .info ul {
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
@@ -707,7 +707,7 @@ h2 {
     background: linear-gradient(45deg, #f06, #3cf, #f06);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-}
+} */
 
 .footer{
     width:auto;
@@ -806,6 +806,12 @@ h2 {
     color: rgb(152, 152, 152);
     font-size: 14px;
     font-weight: 300;   
+}
+.footer .container .footer_form .second .contact a {
+    text-decoration: none;
+    color: rgb(152, 152, 152);
+    font-size: 14px;
+    font-weight: 300;
 }
 
 .footer .container .footer_form .second .btn  {
@@ -1423,12 +1429,12 @@ h2 {
 
 /* For large screens (desktops) */
 @media only screen and (min-width: 1200px) {
-    .section4 .info ul {
+    /* .section4 .info ul {
         flex-direction: row;
       }
     .section4 .info ul li {
         width: 33.33%;
-      }
+      } */
       .footer .cont {
         font-size: 30px;
         width: 50px;
@@ -1438,12 +1444,12 @@ h2 {
     
     /* For medium screens (laptops) */
     @media only screen and (min-width: 768px) and (max-width: 1199px) {
-    .section4 .info ul {
+    /* .section4 .info ul {
         flex-direction: row;
       }
     .section4 .info ul li {
         width: 50%;
-      }
+      } */
       .footer .cont {
         font-size: 30px;
         width: 50px;
@@ -1453,12 +1459,12 @@ h2 {
     
     /* For small screens (tablets) */
     @media only screen and (min-width: 480px) and (max-width: 767px) {
-    .section4 .info ul {
+    /* .section4 .info ul {
         flex-direction: column;
       }
     .section4 .info ul li {
         width: 100%;
-      }
+      } */
       .footer .cont {
         font-size: 30px;
         width: 50px;
@@ -1468,12 +1474,12 @@ h2 {
     
     /* For extra small screens (mobiles) */
     @media only screen and (max-width: 479px) {
-    .section4 .info ul {
+    /* .section4 .info ul {
         flex-direction: column;
       }
     .section4 .info ul li {
         width: 100%;
-      }
+      } */
       .footer .cont {
         font-size: 30px;
         width: 50px;
