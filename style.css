@@ -1329,9 +1329,11 @@ h2 {
     .section3 .services .service-list {
        grid-template-columns: repeat(1, 1fr);
      }
-    .section3 .services .service-list div {
-       padding: 20px;
-     }
+     .section3 .services .service-list div {
+        padding: 15px;
+        width: 80%;
+        margin: auto;
+    }
     .section3 .services .service-list div i {
        font-size: 30px;
      }
@@ -1350,6 +1352,11 @@ h2 {
         justify-content: center;
         align-items: center;
       }
+      .section3 .services .service-list div {
+        padding: 15px;
+        width: 80%;
+        margin: auto;
+    }
     .section3 .services .service-list {
        grid-template-columns: repeat(1, 1fr);
      }
@@ -1429,12 +1436,6 @@ h2 {
 
 /* For large screens (desktops) */
 @media only screen and (min-width: 1200px) {
-    /* .section4 .info ul {
-        flex-direction: row;
-      }
-    .section4 .info ul li {
-        width: 33.33%;
-      } */
       .footer .cont {
         font-size: 30px;
         width: 50px;
@@ -1444,12 +1445,6 @@ h2 {
     
     /* For medium screens (laptops) */
     @media only screen and (min-width: 768px) and (max-width: 1199px) {
-    /* .section4 .info ul {
-        flex-direction: row;
-      }
-    .section4 .info ul li {
-        width: 50%;
-      } */
       .footer .cont {
         font-size: 30px;
         width: 50px;
@@ -1459,12 +1454,7 @@ h2 {
     
     /* For small screens (tablets) */
     @media only screen and (min-width: 480px) and (max-width: 767px) {
-    /* .section4 .info ul {
-        flex-direction: column;
-      }
-    .section4 .info ul li {
-        width: 100%;
-      } */
+
       .footer .cont {
         font-size: 30px;
         width: 50px;
@@ -1474,12 +1464,6 @@ h2 {
     
     /* For extra small screens (mobiles) */
     @media only screen and (max-width: 479px) {
-    /* .section4 .info ul {
-        flex-direction: column;
-      }
-    .section4 .info ul li {
-        width: 100%;
-      } */
       .footer .cont {
         font-size: 30px;
         width: 50px;
@@ -1494,6 +1478,11 @@ h2 {
     }
     footer .container {
         width: 100%;
+    }
+    .section3 .sub-title {
+        text-align: center;
+        font-size: 60px;
+        padding: 0;
     }
     
     .footer .container .footer_form{
