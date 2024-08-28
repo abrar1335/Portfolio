@@ -22,3 +22,4 @@ left_icon.addEventListener('click' , ()=> {
 })
 }
 scroll()
+document.addEventListener('contextmenu', event => event.preventDefault());
