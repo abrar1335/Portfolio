@@ -9,6 +9,9 @@ body {
     background-color: #0c1022;
     color: #fff;
 }
+body::-webkit-scrollbar {
+    display: none;
+}
 html {
     scroll-behavior: smooth;
 }
@@ -580,25 +583,6 @@ html {
     object-fit: fill;
 }
 
-.item .container .card .content {
-    width: 90%;
-    position: absolute;
-    top: 0px;
-    left: 10px;
-    display: none;
-    justify-content: end;
-    align-items: center;
-    flex-direction: column;
-    transition: .3s linear;
-    word-break: break-all;
-    line-height: 20px;
-}
-
-.item .container .card:hover .content {
-    display: flex;
-    transform: scale(1.1);
-}
-
 .item .container .card:hover img {
     display: flex;
     filter: grayscale(50%);
@@ -606,78 +590,6 @@ html {
     filter: blur(2px);
     filter: brightness(50%);
 }
-
-.item .container .card .content h2 {
-    background: linear-gradient(45deg, #f06, #3cf);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    font-weight: 300;
-    font-size: 18px;
-}
-
-.item .container .card .content p {
-    color: #fff;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 40px;
-}
-
-
-.item .container .card .content a {
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 180px;
-    height: 48px;
-    color: #fff;
-    border-radius: 40px;
-    font-size: 19px;
-    text-decoration: none;
-    font-weight: 600;
-    letter-spacing: 1px;
-    z-index: 1;
-    animation-delay: 1.8s;
-
-}
-
-.item .container .card .content a::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    inset: 0;
-    background: linear-gradient(45deg, #f06, #3cf, #f06);
-    background-position: 0 0;
-    background-size: 200%;
-    z-index: -1;
-    border-radius: 40px;
-    filter: blur(5px);
-    transition: 5s ease;
-}
-
-.item .container .card .content a:hover:before {
-    background-position: 100% 0;
-}
-
-.item .container .card .content a::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    inset: 0;
-    background: linear-gradient(45deg, #f06, #3cf, #f06);
-    background-position: 0 0;
-    background-size: 200%;
-    z-index: -1;
-    border-radius: 40px;
-    transition: 5s ease;
-}
-
-.item .container .card .content a:hover:after {
-    background-position: 100% 0;
-}
-
 
 .item .container .move {
     display: flex;
