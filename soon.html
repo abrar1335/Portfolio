@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #0c1022;
+    color: #fff;
+    text-align: center;
+}
+
+.coming-soon-container {
+    max-width: 600px;
+}
+
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.spinner {
+    width: 80px; /* Adjust for size */
+    height: 80px; /* Adjust for size */
+    border-radius: 50%;
+    border: 10px solid transparent; /* Base size */
+}
+
+.spinner1 {
+    border-top-color: #f06; /* First color */
+    border-left-color: #f06; /* First color */
+    animation: spin 1s linear infinite;
+
+}
+
+.spinner2 {
+    border-top-color: #3cf; /* Second color */
+    border-left-color: #3cf; /* Second color */
+    margin-left: 20px; /* Spacing between the spinners */
+    animation: spin2 1s linear infinite;
+
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin2 {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+.go-back {
+    margin-top: 20px;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 48px;
+    color: #fff;
+    border-radius: 40px;
+    font-size: 19px;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    opacity: 0;
+    animation: zoomIn 1s ease forwards;
+    animation-delay: 1.8s;
+
+}
+
+.go-back::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    inset: 0;
+    background: linear-gradient(45deg, #f06, #3cf, #f06);
+    background-position: 0 0;
+    background-size: 200%;
+    z-index: -1;
+    border-radius: 40px;
+    filter: blur(5px);
+    transition: 5s ease;
+}
+
+.go-back:hover:before {
+    background-position: 100% 0;
+}
+
+.go-back::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    inset: 0;
+    background: linear-gradient(45deg, #f06, #3cf, #f06);
+    background-position: 0 0;
+    background-size: 200%;
+    z-index: -1;
+    border-radius: 40px;
+    transition: 5s ease;
+}
+
+.go-back:hover:after {
+    background-position: 100% 0;
+}
+
+
+    </style>
+</head>
+
+<body>
+    <div class="coming-soon-container">
+        <h1>Coming Soon...</h1>
+        <div class="spinner-container">
+            <div class="spinner spinner1"></div>
+            <div class="spinner spinner2"></div>
+        </div>
+        <p>Stay tuned for updates!</p>
+
+        <button class="go-back" onclick="goBack()">Go Back</button>
+
+    </div>
+    <script>
+        function goBack() {
+            window.history.back(); // This navigates to the previous page
+        }
+    </script>
+</body>
+
+</html>
