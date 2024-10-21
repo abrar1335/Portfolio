@@ -9,15 +9,15 @@ body {
     background-color: #0c1022;
     color: #fff;
 }
+
 body::-webkit-scrollbar {
     display: none;
 }
+
 html {
     scroll-behavior: smooth;
 }
 
-
-        
 .header {
     position: fixed;
     top: 0;
@@ -57,6 +57,7 @@ html {
     opacity: 0;
     animation: slideTop .5s ease forwards;
     animation-delay: calc(.2s * var(--i));
+    transition: .3s linear;
 }
 
 .header .navbar a.active,
@@ -84,18 +85,28 @@ html {
 }
 
 
+
 .section1 .home {
     width: 100%;
-    height: 100vh;
+    height: auto;
     justify-content: space-between;
     display: flex;
     align-items: center;
     padding: 70px 10% 0;
 }
 
-.section1 .home .home-content {
+/* .section1 .home .home-content {
     max-width: 500px;
     margin-left: -30px;
+} */
+
+.section1 .home .home-sci {
+    width: 20%;
+}
+
+.section1 .home .home-content,
+.section1 .home .home-img {
+    width: 40%;
 }
 
 .section1 .home .home-content h1 {
@@ -215,6 +226,7 @@ html {
     animation: slideTop 1s ease forwards;
     animation-delay: 2.1s;
 }
+
 .section1 .home .home-sci a:nth-child(4) {
     opacity: 0;
     animation: slideBottm 1s ease forwards;
@@ -312,11 +324,17 @@ html {
     object-fit: cover;
 }
 
+
+
 .section2 .about {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    display: flex;
     align-items: center;
-    gap: 1.5rem;
+}
+
+.section2 .about .about-img,
+.section2 .about .about-text {
+    width: 50%;
 }
 
 .section2 .about .about-img img {
@@ -411,6 +429,8 @@ html {
 .section2 .about .about-text .btn-box:hover:after {
     background-position: 100% 0;
 }
+
+
 
 .section3 .services {
     color: aliceblue;
@@ -546,6 +566,7 @@ html {
     font-weight: 500;
     padding: 10px;
 }
+
 .item .heading h1 span {
     background: linear-gradient(45deg, #f06, #3cf);
     -webkit-text-fill-color: transparent;
@@ -605,7 +626,7 @@ html {
     margin-right: 20px;
 }
 
-                                                         /* progress bar */
+/* progress bar */
 
 .container2 {
     width: 80%;
@@ -939,6 +960,7 @@ footer {
     color: #fff;
 }
 
+
 @keyframes slideTop {
     0% {
         opacity: 0;
@@ -1005,25 +1027,16 @@ footer {
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(360deg);
     }
 }
 
 
-/* media query */
-
 @media screen and (max-width:768px) {
-    .section1 .home {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content:center;
-        /* padding: 70px 10% 0; */
-        width: 90%;
-        margin: auto;
-    }
-    .header .navbar{
+
+    .header .navbar {
         display: flex;
         justify-content: space-between;
         flex-direction: row;
@@ -1042,72 +1055,85 @@ footer {
         align-items: center;
         transition: 0.5s;
     }
-    
-        .header .navbar a {
-            font-size: 22px;
-            margin: 15px 0;
-            opacity: 1;
-            animation: none;
-        }
-    
-        .header .navbar.active {
-            left: 0;
-        }
-    
-        .hamburger {
-            display: flex;
-        }
-    
-        /* Hamburger Animation */
-        .hamburger.active span:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
-        }
-    
-        .hamburger.active span:nth-child(2) {
-            opacity: 0;
-        }
-    
-        .hamburger.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(5px, -5px);
-        }
 
-    .section1 .home-sci {
+    .header .navbar a {
+        font-size: 22px;
+        margin: 15px 0;
+        opacity: 1;
+        animation: none;
+    }
+
+    .header .navbar.active {
+        left: 0;
+    }
+
+    .hamburger {
         display: flex;
     }
+
+    /* Hamburger Animation */
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    .section1 {
+        margin-top: 60px;
+    }
+
+    .section1 .home {
+        width: 80%;
+        margin: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+
+    .section1 .home .home-sci,
+    .section1 .home .home-content,
+    .section1 .home .home-img {
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .section1 .home .home-sci {
+        display: flex;
+    }
+
     .section1 .home .home-sci a {
         margin: 20px 10px;
     }
 
-    .section1 .home .home-content {
-        max-width: unset;
-        width: 100%;
-    }
-
-    .section1 .home .home-img {
-        margin-top: 30px;
+    .section1 .home .home-img .glowing-circle span {
+        width: 78%;
     }
 
     .section2 .about {
-        display: flex;
-        align-items: center;
-        justify-content: center;
         flex-direction: column;
-        margin-top: 20px;
         width: 80%;
         margin: auto;
+        margin-top: 20px;
     }
 
-    .section2 .about .about-img {
-        width:80%;
-    }
-    .section2 .about .about-img img {
-        width: 100%;
-        height: auto;
-    }
-
+    .section2 .about .about-img,
     .section2 .about .about-text {
         width: 100%;
     }
+
+    .section2 .about .about-img img {
+        width: 100%;
+        height: 100%;
+        margin-top: 20px;
+    }
+
 
     .section3 .services .service-list div {
         width: 80%;
@@ -1118,6 +1144,7 @@ footer {
         width: 80%;
         margin: auto;
     }
+
     .progress-bar {
         width: auto;
     }
@@ -1131,11 +1158,12 @@ footer {
         margin: 5px 0;
     }
 
-    
+
     .socials li {
         display: inline-block;
         margin: 0 5px;
     }
+
 
 }
 
@@ -1153,22 +1181,30 @@ footer {
     .item .container .move {
         margin-top: 12px;
     }
-    
+
+    .section3 .services .service-list div {
+        width: 86%;
+    }
+
 }
 
-@media screen and  (min-width: 769px) and (max-width: 1239px)  {
+@media screen and (min-width: 769px) and (max-width: 1239px) {
     .section1 {
         width: 100%;
     }
+
     .section1 .home {
         width: 100%;
         display: flex;
         justify-content: space-between;
     }
-    .section1 .home .home-content , .home-img {
+
+    .section1 .home .home-content,
+    .home-img {
         width: 38%;
     }
-    .section1 .home .home-sci{
+
+    .section1 .home .home-sci {
         width: 10%;
         margin-left: -20px;
     }
